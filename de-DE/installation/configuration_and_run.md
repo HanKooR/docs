@@ -8,20 +8,20 @@ name: Konfiguration und Start
 
 ### Standard-Konfiguration
 
-Die Standard-Konfiguration ist in `conf/app.ini` gespeichert. Du brauchst diese Datei **NICHT** verändern, seit `v0.6.0` ist das im Programm eingebunden.
+Die Standard-Konfiguration ist in `conf/app.ini` gespeichert. Du solltest diese Datei **NICHT** verändern, seit `v0.6.0` ist das im Programm eingebunden.
 
 ### Manuelle Konfiguration
 
 Wie macht man nun eigene Änderungen, wenn man die `conf/app.ini` nicht verändern darf? Erstelle einfach eine `custom/conf/app.ini`! Die entsprechenden Schlüssel in den entsprechenden Sektionen werden die Werte aus `conf/app.ini` überschreiben.
 
-Zum Beispiel kann man, um denn Wurzelpfad, in dem die Repository-Rohdaten gespeichert werden, zu verändern, eine Zeile wie die folgende hinzufügen:
+Zum Beispiel kann man, um den Wurzelpfad in dem die Repository-Rohdaten gespeichert werden zu verändern, eine Zeile wie die Folgende hinzufügen:
 
 ```
 [repository]
 ROOT = /home/jiahuachen/gogs-repositories
 ```
 
-Natürlich kann man auch die Datenbank-Einstellungen ändern
+Natürlich kann man auch die Datenbank-Einstellungen ändern:
 
 ```
 [database]
@@ -32,7 +32,7 @@ PASSWD = root
 
 Ja, warum nicht einfach `conf/app.ini` verändern? Der Grund ist, die eigene Konfiguration sicher zu speichern:
 
-- Alle, die das Programm aus der Binärdateien installieren, können jedes mal, wenn eine neue Version rauskommt, die Dateien einfach in den Ordner kopieren, ohne etwas neu konfigurieren zu müssen.
+- Alle, die das Programm aus den Binärdateien installieren, können jedes mal, wenn eine neue Version herauskommt, die Dateien einfach in den Ordner kopieren, ohne etwas neu konfigurieren zu müssen.
 - Für alle, die das Programm aus den Quelldateien installieren, haben wir die `custom/conf/app.ini` in der `.gitignore` aus der Versionskontrolle ausgenommen, sodass es keine neue Version erzeugt, wenn man Konfigurationsänderungen macht oder eine neue Version herunterlädt.
 
 ## Gogs Server starten
@@ -50,4 +50,4 @@ Ja, warum nicht einfach `conf/app.ini` verändern? Der Grund ist, die eigene Kon
 - Es gibt einige Wege, Gogs zu starten:
 	- Einfach: Nutze einfach `./gogs web`
 	- Daemons: siehe [scripts](https://github.com/gogits/gogs/tree/master/scripts) Ordner
-- gucke in `/install` um die erste Konfiguration zu erstellen.
+- schaue in `/install`, um die erste Konfiguration zu erstellen.
